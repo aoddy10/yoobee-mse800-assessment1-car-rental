@@ -386,28 +386,6 @@ class Database:
         except Error as e:
             print(f"Error get all cars from database: {e}")
             return None
-        
-    def get_available_cars(self):
-        try:
-
-            self.cursor.execute(FIND_AVAILABLE_CAR)
-            cars = self.cursor.fetchall()
-
-            return cars
-        except Error as e:
-            print(f"Error get available cars from database: {e}")
-            return None
-    
-    def get_rented_cars(self):
-        try:
-
-            self.cursor.execute(FIND_RENTED_CAR)
-            cars = self.cursor.fetchall()
-
-            return cars
-        except Error as e:
-            print(f"Error get rented cars from database: {e}")
-            return None
     
     def get_car_by_id(self, id:int):
         try:
